@@ -11,8 +11,9 @@ class MainWin(QWidget):
         self.show()
     def set_appear(self):
         self.setWindowTitle('Здоровье')
+        self.resize(400, 400)
     def initUI(self):
-        pass
+        self
     def connets(self):
         pass
 
