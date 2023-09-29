@@ -19,14 +19,14 @@ class SecondWin(QWidget):
         line_l.addWidget(input_name, alignment=Qt.AlignLeft)
         text_age = QLabel(txt_age)
         line_l.addWidget(text_age, alignment=Qt.AlignLeft)
-        input_age = QLineEdit('0')
-        line_l.addWidget(input_age, alignment=Qt.AlignLeft)
+        self.input_age = QLineEdit('0')
+        line_l.addWidget(self.input_age, alignment=Qt.AlignLeft)
         text_exercise = QLabel(txt_test1)
         line_l.addWidget(text_exercise, alignment=Qt.AlignLeft)
         self.button = QPushButton(txt_starttest1)
         line_l.addWidget(self.button, alignment=Qt.AlignLeft)
-        result = QLineEdit('0')
-        line_l.addWidget(result, alignment=Qt.AlignLeft)
+        self.result = QLineEdit('0')
+        line_l.addWidget(self.result, alignment=Qt.AlignLeft)
         task = QLabel(txt_test2)
         line_l.addWidget(task, alignment=Qt.AlignLeft)
         self.button_exercise = QPushButton(txt_starttest2)
@@ -36,10 +36,10 @@ class SecondWin(QWidget):
         self.button_finish = QPushButton(txt_starttest3)
         line_l.addWidget(self.button_finish, alignment=Qt.AlignLeft)
 
-        result1 = QLineEdit('0')
-        line_l.addWidget(result1, alignment=Qt.AlignLeft)
-        result2 = QLineEdit('0')
-        line_l.addWidget(result2, alignment=Qt.AlignLeft)
+        self.result1 = QLineEdit('0')
+        line_l.addWidget(self.result1, alignment=Qt.AlignLeft)
+        self.result2 = QLineEdit('0')
+        line_l.addWidget(self.result2, alignment=Qt.AlignLeft)
 
 
 
@@ -104,5 +104,6 @@ class SecondWin(QWidget):
         self.resize(400, 400)
 
     def next(self):
-        self.finalwin = Final()
+        self.finalwin = Final(int(self.input_age.text()), int(self.result.text()),int(self.result1.text()), int(self.result2.text()))
         self.hide()
+
