@@ -1,7 +1,7 @@
 from PyQt5.QtCore import Qt, QTimer, QTime
 from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout,QHBoxLayout, QLineEdit
 from instr import *
-from finalwin import Final
+from finalwin import FinalWin as Final
 
 class SecondWin(QWidget):
     def __init__(self):
