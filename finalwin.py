@@ -4,12 +4,16 @@ from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel
 
 
 class FinalWin(QWidget):
-    def __init__(self, exp):
+    def __init__(self, age, t1, t2, t3):
         ''' окно, в котором проводится опрос '''
         super().__init__()
 
         # получаем данные об эксперименте
-        self.exp = exp
+        self.age = age
+        self.t1 = t1
+        self.t2 = t2
+        self.t3 = t3
+
 
         # создаём и настраиваем графические элементы:
         self.initUI()
@@ -21,10 +25,10 @@ class FinalWin(QWidget):
         self.show()
 
     def results(self):
-        if self.exp.age < 7:
+        if self.age < 7:
             self.index = 0
             return "нет данных для такого возраста"
-        self.index = (4 * (int(self.exp.t1) + int(self.exp.t2) + int(self.exp.t3)) - 200) / 10
+        self.index = (4 * (int(self.t1) + int(self.t2) + int(self.t3)) - 200) / 10
         if self.exp.age == 7 or self.exp.age == 8:
             if self.index >= 21:
                 return txt_res1
