@@ -1,5 +1,5 @@
 from instr import *
-from PyQt5.QtCore import Qt, QTimer, QTime, QLocale
+from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QWidget, QVBoxLayout, QLabel
 
 

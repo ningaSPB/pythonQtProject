@@ -1,5 +1,5 @@
-from PyQt5.QtCore import Qt, QTimer, QTime
-from PyQt5.QtWidgets import QApplication, QWidget, QLabel, QPushButton, QVBoxLayout,QHBoxLayout, QLineEdit
+from PyQt5.QtCore import Qt, QTimer
+from PyQt5.QtWidgets import QWidget, QLabel, QPushButton, QVBoxLayout,QHBoxLayout, QLineEdit
 from instr import *
 from finalwin import FinalWin as Final
 
